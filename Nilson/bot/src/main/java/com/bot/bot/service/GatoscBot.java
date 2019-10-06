@@ -1,7 +1,7 @@
 package com.bot.bot.service;
 
-import com.avp256.avp256_bot.hendler.TelegramMessageHandler;
-import com.avp256.avp256_bot.model.telegram.TelegramUpdate;
+import com.bot.bot.handler.TelegramMessageHandler;
+import com.bot.bot.models.telegram.TelegramUpdate;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.experimental.FieldDefaults;
