@@ -4,8 +4,9 @@ import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 public class inventariBot extends TelegramLongPollingBot {
     public void onUpdateReceived(Update update) {
 
-        System.out.println(update.getMessage().getText());
-        
+        String a = update.getMessage().getText();
+        String b = update.getMessage().getFrom().getFirstName();
+        System.out.println(b + " Dijo: "+a);
     }
 
     public String getBotUsername() {
