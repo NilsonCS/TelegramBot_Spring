@@ -1,3 +1,5 @@
-2019-10-03 20:53:43,698 WARN  [DefaultSoapUICore] Missing folder [C:\Users\mgtal\ext] for external libraries
-2019-10-03 20:53:43,874 INFO  [DefaultSoapUICore] initialized soapui-settings from [C:\Users\mgtal\soapui-settings.xml]
-2019-10-03 20:53:44,222 INFO  [WorkspaceImpl] Loading workspace from [C:\Users\mgtal\intellij-soapui-workspace.xml]
+2019-10-04 21:51:16,572 WARN  [DefaultSoapUICore] Missing folder [C:\Users\mgtal\ext] for external libraries
+2019-10-04 21:51:16,996 INFO  [DefaultSoapUICore] initialized soapui-settings from [C:\Users\mgtal\soapui-settings.xml]
+2019-10-04 21:51:17,646 INFO  [WorkspaceImpl] Loading workspace from [C:\Users\mgtal\intellij-soapui-workspace.xml]
+2019-10-04 22:45:33,734 INFO  [WorkspaceImpl] Saved workspace to [C:\Users\mgtal\intellij-soapui-workspace.xml]
+2019-10-04 22:45:33,743 INFO  [DefaultSoapUICore] Settings saved to [C:\Users\mgtal\soapui-settings.xml]

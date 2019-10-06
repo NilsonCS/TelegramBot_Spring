@@ -30,15 +30,5 @@ public class GatoscBot extends TelegramLongPollingBot {
         }
     }
 
-    @Override
-    public String getBotUsername() {
-        // Se devuelve el nombre que dimos al bot al crearlo con el BotFather
-        return "GatoscBot";
-    }
 
-    @Override
-    public String getBotToken() {
-        // Se devuelve el token que nos generó el BotFather de nuestro bot
-        return "718088447:AAFnThJd7y3IjjcmWFFJadMLYhfrqlRkAbY";
-    }
 }
