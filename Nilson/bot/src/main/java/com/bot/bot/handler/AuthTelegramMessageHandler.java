@@ -34,7 +34,7 @@ public class AuthTelegramMessageHandler implements TelegramMessageHandler {
                     telegramUserRepository.save(user);
 
                     Long chatId = telegramUpdate.getMessage().getChat().getId();
-                    String text = "You have been authorized as " + person.getName();
+                    String text = "Fuiste autorizado " + person.getName();
                     gatoscBot.sendTextMessage(chatId, text);
                 });
     }
