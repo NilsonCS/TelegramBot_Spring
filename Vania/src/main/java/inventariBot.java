@@ -15,7 +15,10 @@ public class inventariBot extends TelegramLongPollingBot {
                 "\n" +"A: Si desea ver el menu escriba /menu" );
         String comando = update.getMessage().getText();
         if (comando.equals("/menu")){
-            sendMessage.setText("Agregar un nuevo producto"+"\n"+"Eliminar producto"+"\n"+"Editar producto"+"\n"+"Lista de productos");
+            sendMessage.setText("/A Agregar un nuevo producto"+"\n"+"/B Eliminar producto"+"\n"+"/C Editar producto"+"\n"+"/D Lista de productos");
+        }if(comando.equals("/a")){
+            sendMessage.setText("Usted eligio agregar productos");
+            
         }
 
         try
