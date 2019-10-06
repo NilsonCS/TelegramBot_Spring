@@ -10,7 +10,7 @@ import lombok.experimental.FieldDefaults;
 import org.springframework.stereotype.Component;
 
 import java.util.Objects;
-
+// manejamos el boton de ayuda para diferenciar entre los registrados y los que no
 @Component
 @FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
 @RequiredArgsConstructor
@@ -22,12 +22,12 @@ public class HelpTelegramMessageHandler implements TelegramMessageHandler {
         if (!telegramUpdate.getMessage().getText().startsWith(gatoscBot.HELP_BUTTON)) {
             return;
         }
-        Long chatId = telegramUpdate.getMessage().getChat().getId();
+        Long chatId = telegramUpdate.getMessage().getChat().getId();  // aca se maneja el boto de ayuda
         String text;
         if (Objects.isNull(telegramUpdate.getMessage().getFrom().getPerson())) {
-            text = "Help service is allowed only for authorized users";
+            text = "La ayuda es solo para usuarios registrados";
         } else {
-            text = "We will help you";
+            text = "Le ayudaremos";
         }
         TelegramUser user = telegramUpdate.getMessage().getFrom();
         gatoscBot.sendTextMessage(chatId, text);

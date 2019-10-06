@@ -8,6 +8,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import java.time.LocalDateTime;
+//// model del  user tiene su respectiva informacion de usuario
 
 @Entity
 @Data

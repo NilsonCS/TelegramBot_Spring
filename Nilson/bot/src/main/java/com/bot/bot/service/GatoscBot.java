@@ -26,10 +26,12 @@ import java.util.List;
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class GatoscBot extends TelegramLongPollingBot {
 
+// declaracion de botones
     public static final String HELLO_BUTTON = "Hello";
     public static final String START_COMMAND = "/start";
     public static final String HELP_BUTTON = "Help";
-   // public static final String MOSTRAR_BUTTON = "Mostrar";
+   public static final String MOSTRAR_BUTTON = "Mostrar";
+// aca se ponen las repectivas llaves dadas por telegram
 
     @Getter
     @Value("${bot.avp256.username}")
@@ -86,11 +88,13 @@ public class GatoscBot extends TelegramLongPollingBot {
         KeyboardRow keyboardSecondRow = new KeyboardRow();
         keyboardSecondRow.add(new KeyboardButton(HELP_BUTTON));
 
-        //KeyboardRow keyboardThirdRow = new KeyboardRow();
-        //keyboardSecondRow.add(new KeyboardButton(MOSTRAR_BUTTON));
-
+        KeyboardRow keyboardThirdRow = new KeyboardRow();
+        keyboardSecondRow.add(new KeyboardButton(MOSTRAR_BUTTON));
+// se agregan los botones en la interfaz grafica
         keyboard.add(keyboardFirstRow);
         keyboard.add(keyboardSecondRow);
+        keyboard.add(keyboardThirdRow);
+
         replyKeyboardMarkup.setKeyboard(keyboard);
         return replyKeyboardMarkup;
     }

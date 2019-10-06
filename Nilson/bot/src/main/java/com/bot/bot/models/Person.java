@@ -5,7 +5,7 @@ import lombok.experimental.FieldDefaults;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
-
+// correcto manejo de ruta para person
 @Entity
 @Data
 @EqualsAndHashCode(of = {"id"})

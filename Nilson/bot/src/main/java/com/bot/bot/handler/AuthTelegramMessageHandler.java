@@ -11,7 +11,7 @@ import lombok.experimental.FieldDefaults;
 import org.springframework.stereotype.Component;
 
 import java.util.Objects;
-
+// esta clase sirve para autorizar a una persona y un usuario determinado que se conecta directamente entre usuria y pesonra en los modelos se ven los atributos
 @Component
 @FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
 @RequiredArgsConstructor

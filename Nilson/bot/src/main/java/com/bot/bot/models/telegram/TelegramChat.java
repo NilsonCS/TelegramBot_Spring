@@ -2,7 +2,7 @@ package com.bot.bot.models.telegram;
 
 import lombok.*;
 import lombok.experimental.FieldDefaults;
-
+// model del chat de telegram posee informacion
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
