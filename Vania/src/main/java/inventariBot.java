@@ -11,7 +11,12 @@ public class inventariBot extends TelegramLongPollingBot {
         //Enviando los mensajes
 
         SendMessage sendMessage = new SendMessage().setChatId(update.getMessage().getChatId());
-        sendMessage.setText("Bienvenido!!!!" + update.getMessage().getFrom().getFirstName()+"\n"+ update.getMessage().getText());
+        sendMessage.setText("Bienvenido!!!!"+"\t" + update.getMessage().getFrom().getFirstName()+"\n"+
+                "\n" +"A: Si desea ver el menu escriba /menu" );
+        String comando = update.getMessage().getText();
+        if (comando.equals("/menu")){
+            sendMessage.setText("Agregar un nuevo producto"+"\n"+"Eliminar producto"+"\n"+"Editar producto"+"\n"+"Lista de productos");
+        }
 
         try
         {

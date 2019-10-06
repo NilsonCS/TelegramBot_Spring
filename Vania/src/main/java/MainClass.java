@@ -6,8 +6,9 @@ public class MainClass {
     public static void main(String[] args){
         ApiContextInitializer.init();
         TelegramBotsApi telegramBotsApi = new TelegramBotsApi();
+        inventariBot bot = new inventariBot();
         try {
-            telegramBotsApi.registerBot(new inventariBot());
+            telegramBotsApi.registerBot( bot);
 
         } catch (TelegramApiException e) {
             e.printStackTrace();
