@@ -1,6 +1,7 @@
 package com.bot.bot.service;
 
-
+import com.avp256.avp256_bot.hendler.TelegramMessageHandler;
+import com.avp256.avp256_bot.model.telegram.TelegramUpdate;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.experimental.FieldDefaults;
@@ -38,8 +39,24 @@ public class GatoscBot extends TelegramLongPollingBot {
     String botToken;
 
 
+    final TelegramUpdateService telegramUpdateService;
+    final List<TelegramMessageHandler> telegramMessageHandlers;
+
+    @Autowired
+    public Avp256Bot(TelegramUpdateService telegramUpdateService,
+                     @Lazy List<TelegramMessageHandler> telegramMessageHandlers) {
+        this.telegramUpdateService = telegramUpdateService;
+        this.telegramMessageHandlers = telegramMessageHandlers;
+    }
 
 
+    @Override
+    public void onUpdateReceived(Update update) {
+        TelegramUpdate telegramUpdate = telegramUpdateService.save(update);
+        telegramMessageHandlers.forEach(
+                telegramMessageHandler -> telegramMessageHandler.handle(telegramUpdate)
+        );
+    }
 
     public synchronized void sendTextMessage(Long chatId, String text) {
         SendMessage sendMessage = new SendMessage();
