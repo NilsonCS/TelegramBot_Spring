@@ -29,7 +29,7 @@ public class GatoscBot extends TelegramLongPollingBot {
     public static final String HELLO_BUTTON = "Hello";
     public static final String START_COMMAND = "/start";
     public static final String HELP_BUTTON = "Help";
-    public static final String MOSTRAR_BUTTON = "Mostrar";
+   // public static final String MOSTRAR_BUTTON = "Mostrar";
 
     @Getter
     @Value("${bot.avp256.username}")
@@ -38,12 +38,11 @@ public class GatoscBot extends TelegramLongPollingBot {
     @Value("${bot.avp256.token}")
     String botToken;
 
-
     final TelegramUpdateService telegramUpdateService;
     final List<TelegramMessageHandler> telegramMessageHandlers;
 
     @Autowired
-    public Avp256Bot(TelegramUpdateService telegramUpdateService,
+    public GatoscBot(TelegramUpdateService telegramUpdateService,
                      @Lazy List<TelegramMessageHandler> telegramMessageHandlers) {
         this.telegramUpdateService = telegramUpdateService;
         this.telegramMessageHandlers = telegramMessageHandlers;
@@ -87,8 +86,8 @@ public class GatoscBot extends TelegramLongPollingBot {
         KeyboardRow keyboardSecondRow = new KeyboardRow();
         keyboardSecondRow.add(new KeyboardButton(HELP_BUTTON));
 
-        KeyboardRow keyboardThirdRow = new KeyboardRow();
-        keyboardSecondRow.add(new KeyboardButton(MOSTRAR_BUTTON));
+        //KeyboardRow keyboardThirdRow = new KeyboardRow();
+        //keyboardSecondRow.add(new KeyboardButton(MOSTRAR_BUTTON));
 
         keyboard.add(keyboardFirstRow);
         keyboard.add(keyboardSecondRow);
