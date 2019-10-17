@@ -30,10 +30,6 @@ public class InventaryTelegramMessageHandle extends TelegramLongPollingBot {
             sendMessage.setText("Usted eligio Listar productos");}
 
     }
-
-
-
-
     @Override
     public String getBotUsername() {
         return "GatoscBot";
