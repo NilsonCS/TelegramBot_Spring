@@ -31,6 +31,7 @@ public class GatoscBot extends TelegramLongPollingBot {
     public static final String START_COMMAND = "/start";
     public static final String HELP_BUTTON = "Help";
    public static final String MOSTRAR_BUTTON = "Mostrar";
+   public static  final String INVENTARIO_BUTTON = "Inventario";
 // aca se ponen las repectivas llaves dadas por telegram
 
     @Getter
@@ -90,11 +91,15 @@ public class GatoscBot extends TelegramLongPollingBot {
 
         KeyboardRow keyboardThirdRow = new KeyboardRow();
         keyboardSecondRow.add(new KeyboardButton(MOSTRAR_BUTTON));
+
+        keyboardRow keyboardFourthRow = new KeyboardRow();
+        keyboardSecondRow.add(new KeyboardButton(INVENTARIO_BUTTON));
+
 // se agregan los botones en la interfaz grafica
         keyboard.add(keyboardFirstRow);
         keyboard.add(keyboardSecondRow);
         keyboard.add(keyboardThirdRow);
-
+        keyboard.add(keyboardFourthRow);
         replyKeyboardMarkup.setKeyboard(keyboard);
         return replyKeyboardMarkup;
     }

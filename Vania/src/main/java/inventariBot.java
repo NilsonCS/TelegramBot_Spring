@@ -19,7 +19,7 @@ public class inventariBot extends TelegramLongPollingBot {
         }if(comando.equals("/a")){
             sendMessage.setText("Usted eligio agregar productos");
         }if(comando.equals("/b")){
-            sendMessage.setText("Usted eligio Eliminar productos");}
+            sendMessage.setText("Usted eligio Eliminar produ+=]ctos");}
         if(comando.equals("/c")){
         sendMessage.setText("Usted eligio Editar productos");}
         if(comando.equals("/d")){
