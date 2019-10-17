@@ -92,8 +92,8 @@ public class GatoscBot extends TelegramLongPollingBot {
         KeyboardRow keyboardThirdRow = new KeyboardRow();
         keyboardSecondRow.add(new KeyboardButton(MOSTRAR_BUTTON));
 
-        keyboardRow keyboardFourthRow = new KeyboardRow();
-        keyboardSecondRow.add(new KeyboardButton(INVENTARIO_BUTTON));
+        KeyboardRow keyboardFourthRow = new KeyboardRow();
+        keyboardThirdRow.add(new KeyboardButton(INVENTARIO_BUTTON));
 
 // se agregan los botones en la interfaz grafica
         keyboard.add(keyboardFirstRow);
